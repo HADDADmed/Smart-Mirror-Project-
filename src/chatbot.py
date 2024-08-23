@@ -2,7 +2,7 @@ import google.generativeai as genai
 from flask_cors import CORS  # Import CORS from flask_cors
 
 def chatbot(question):
-    genai.configure(api_key="AIzaSyBJMiBQct0BBitW5QEzEJ7FT8rzRrqK3tg")
+    genai.configure(api_key="")
     generation_config = {"temperature": 0.9, "top_p": 1, "top_k": 1, "max_output_tokens": 2048}
     model = genai.GenerativeModel("gemini-pro", generation_config=generation_config)
     response = model.generate_content([f"{question}"])
